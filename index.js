@@ -5,7 +5,7 @@ const querystring = require('querystring');
 const convertSync = (command) => childProcess.execSync(command);
 const convertAsync = (command, cb) => childProcess.exec(
   command,
-  { maxBuffer: 1024 * 1024 },
+  { maxBuffer: 10 * 1024 * 1024 },
   cb
 );
 
